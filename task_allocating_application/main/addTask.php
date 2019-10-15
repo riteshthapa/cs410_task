@@ -36,7 +36,7 @@
 </form>
 
 <?php
-    include $path."footer.php";
+    include $path."footer.html";
 ?>      
     </body>
 </html>
