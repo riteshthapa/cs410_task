@@ -22,3 +22,12 @@
 function resetForm() {
     document.getElementById("taskForm").reset();
 }
+
+function deleteTask() {
+	document.getElementById("deleteTaskForm").removeAttribute("hidden");
+	resetForm();
+}
+function cancelDelete() {
+	document.getElementById("deleteTaskForm").setAttribute("hidden", "");
+	document.getElementById("taskName").value = "";
+}
