@@ -22,29 +22,29 @@
            
         <form id="taskForm" action="addTask.php" name="myForm" method="GET">
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label>Task Title</label>
-                    <input type="text" class="form-control" id="taskTitle" name="taskTitle" placeholder="Task title" required>
-                </div>
+        	<div class="form-row">
+        		<div class="form-group col-md-6">
+        			<label>Task Title</label>
+        			<input type="text" class="form-control" id="taskTitle" name="taskTitle" placeholder="Task title" required>
+        		</div>
 
-                <div class="form-group col-md-6">
-                    <label>Assigned To</label>
-                    <input type="text" class="form-control" name="assignedTo" id="assignedTo" placeholder="Employee's Name" required>
-                </div>
-            </div>   
+        		<div class="form-group col-md-6">
+        			<label>Assigned To</label>
+        			<input type="text" class="form-control" name="assignedTo" id="assignedTo" placeholder="Employee's Name" required>
+        		</div>
+        	</div>   
             
             <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter task description" name="taskDes" rows="3" required></textarea>
+    		<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter task description" name="taskDes" rows="3" required></textarea>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Priority</label>
                     <select class="custom-select my-1 mr-sm" name="taskPriority" id="inlineFormCustomSelectPref">
                         <option selected>Choose...</option>
-                        <option value="High">High</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Low">Low</option>
+				        <option value="High">High</option>
+				        <option value="Medium">Medium</option>
+				        <option value="Low">Low</option>
                     </select>
                 </div>
 
@@ -60,17 +60,17 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label>Category</label>
-                    <input type="text" class="form-control" id="taskCategory" name="taskCategory" required>
-                </div>
+			<div class="form-row">
+        		<div class="form-group col-md-6">
+        			<label>Category</label>
+        			<input type="text" class="form-control" id="taskCategory" name="taskCategory" required>
+        		</div>
 
-                <div class="form-group col-md-6">
-                    <label for="example-date-input">Due Date</label>
-                    <input class="form-control" type="date" name="dueDate" value="2019-10-15" id="example-date-input">
-                </div>
-            </div>
+				<div class="form-group col-md-6">
+					<label for="example-date-input">Due Date</label>
+					<input class="form-control" type="date" name="dueDate" value="2019-10-15" id="example-date-input">
+				</div>
+        	</div>
         </div>
 
 

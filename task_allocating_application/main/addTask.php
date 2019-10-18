@@ -9,8 +9,9 @@
     $taskCategory = $_GET["taskCategory"];
     $assignedTo = $_GET["assignedTo"];
     $dueDate = $_GET["dueDate"];
+    $taskStatus = $_GET["taskStatus"];
 
-    $x = $taskTitle . "," . $taskDes . "," . $taskPriority . "," . $taskCategory . "," . $assignedTo . "," . $dueDate;
+    $x = $taskTitle . "," . $taskDes . "," . $taskPriority . "," . $taskCategory . "," . $assignedTo . "," . $dueDate . "," . $taskStatus;
     
     fwrite($fileName,$x ."\n");
 ?>
@@ -36,7 +37,7 @@
 </form>
 
 <?php
-    include $path."footer.html";
+    include $path."footer.php";
 ?>      
     </body>
 </html>

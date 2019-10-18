@@ -1,11 +1,9 @@
-sdfsdaf,sdf,High,utilities,asdf
-sdfsdaf,sdf,High,utilities,asdf
-dgfh,gdh,High,dgsfh,sdh
-sdfsdaf,sdf,,sdf,sdf
-sdfsdaf,sdf,,sdf,sdf
-df,sdf,High,sdfa,sdaf
-fdg,fdg,High,fdg,dfsg.2019-10-15
-ergw,ge,Medium,egr,egr.2019-10-15
-dfg,dfsg,High,dfsg,dfg,2019-10-15
-sdfsdaf,asdasdasdasdsafsdafasd,Medium,asd,asd,2019-10-15
-dsf,sadf,Medium,dsaf,sdaf,2019-10-15
+ewrwer,ewr,High,ewrewr,wer,2019-10-15,Not Started
+qwerew,werewr,High,wer,wer,2019-10-15,Not Started
+wetr,wertq,High,wqt,qrewt,2019-10-15,Not Started
+sdaf,sdaf,Medium,sdfa,asdf,2019-10-15,Complete
+sdaf,sdaf,High,sdaf,asdf,2019-10-15,Complete
+sdaf,sdaf,Medium,sdaf,sadf,2019-10-15,Complete
+reyte,fdg,High,gfh,gfdjfd,2019-10-15,Complete
+gfdhuerty,dfgas,High,asg,asg,2019-10-15,Complete
+fsdag,asgfd,High,asgafdg,adgfag,2019-10-15,On Hold
