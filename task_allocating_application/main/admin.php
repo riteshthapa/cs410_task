@@ -20,49 +20,77 @@
 
     <div id="form_container" class="collapse">
            
-        <form id="taskForm" action = "addTask.php" name="myForm" method = "GET">
+        <form id="taskForm" action="addTask.php" name="myForm" method="GET">
 
-        	<div class="form-row">
-        		<div class="form-group col-md-6">
-        			<label>Task Title</label>
-        			<input type="text" class="form-control" id="taskTitle" name="taskTitle" placeholder="Task title" required>
-        		</div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Task Title</label>
+                    <input type="text" class="form-control" id="taskTitle" name="taskTitle" placeholder="Task title" required>
+                </div>
 
-        		<div class="form-group col-md-6">
-        			<label>Assigned To</label>
-        			<input type="text" class="form-control" name="assignedTo" id="assignedTo" placeholder="Employee's Name" required>
-        		</div>
-        	</div>   
+                <div class="form-group col-md-6">
+                    <label>Assigned To</label>
+                    <input type="text" class="form-control" name="assignedTo" id="assignedTo" placeholder="Employee's Name" required>
+                </div>
+            </div>   
             
             <label for="exampleFormControlTextarea1">Description</label>
-    		<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter task description" name="taskDes" rows="3" required></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter task description" name="taskDes" rows="3" required></textarea>
 
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Priority</label>
-            <select class="custom-select my-1 mr-sm-2" name="taskPriority" id="inlineFormCustomSelectPref">
-            	<option selected>Choose...</option>
-				<option value="High">High</option>
-				<option value="Medium">Medium</option>
-				<option value="Low">Low</option>
-			</select>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Priority</label>
+                    <select class="custom-select my-1 mr-sm" name="taskPriority" id="inlineFormCustomSelectPref">
+                        <option selected>Choose...</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
 
-			<div class="form-row">
-        		<div class="form-group col-md-6">
-        			<label>Category</label>
-        			<input type="text" class="form-control" id="taskCategory" name="taskCategory" required>
-        		</div>
+                <div class="form-group col-md-6"> 
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Status</label>
+                    <select class="custom-select my-1 mr-sm" name="taskStatus" id="inlineFormCustomSelectPref">
+                        <option selected>Choose...</option>
+                        <option value="Not Started">Not Started</option>
+                        <option value="Complete">Complete</option>
+                        <option value="On Hold">On Hold</option>
+                        <option value="In Progress">In Progress</option>
+                    </select>
+                </div>
+            </div>
 
-				<div class="form-group col-md-6">
-					<label for="example-date-input">Due Date</label>
-					<input class="form-control" type="date" name="dueDate" value="2019-10-15" id="example-date-input">
-				</div>
-        	</div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Category</label>
+                    <input type="text" class="form-control" id="taskCategory" name="taskCategory" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="example-date-input">Due Date</label>
+                    <input class="form-control" type="date" name="dueDate" value="2019-10-15" id="example-date-input">
+                </div>
+            </div>
         </div>
 
 
         <input class="btn btn-primary" type="submit" value="Add Task" data-toggle="collapse" data-target="#form_container" aria-expanded="false" aria-controls="form_container">
 
         <input class="btn btn-primary" type="button" value="Cancel" onclick="resetForm()">
+
+        <input class="btn btn-danger" type="button" value="Delete Task" onclick="deleteTask()">
+
     </form>
+
+     <div id="deleteTaskForm" hidden>
+        <h3>Type the task title name you want deleted from the list.</h3>
+        <form action = "deleteTask.php" name="subForm" method = "GET">
+            Task Name:<input type = "text" name="taskTitle" id="taskName" placeholder="Enter task title name" required>
+            <label><input class="button" type = "submit" value = "Delete Task">
+                <input class="button" type = "button" value = "Cancel" onclick = "cancelDelete()">
+            </label>
+        </form>
+    </div>
     
 
     <!-- input class="btn btn-primary" type="submit" value="Add Task" data-toggle="collapse" data-target="#form_container" aria-expanded="false" aria-controls="collapseExample">
@@ -79,6 +107,7 @@
                 <th>Category</th>
                 <th>Assigned To</th>
                 <th>Due Date</th>
+                <th>Task Status</th>
             </tr>
 
             <?php
@@ -94,7 +123,7 @@
                     if($line != ""){
                         $parts = explode(",", $line);
                     
-                        echo("<tr><td>$parts[0]</td><td>$parts[1]</td><td>$parts[2]</td><td>$parts[3]</td><td>$parts[4]</td><td>$parts[5]</td></tr>");
+                        echo("<tr><td>$parts[0]</td><td>$parts[1]</td><td>$parts[2]</td><td>$parts[3]</td><td>$parts[4]</td><td>$parts[5]</td><td>$parts[6]</td></tr>");
                     }
                 }
             ?>
@@ -115,6 +144,8 @@
     include $path."footer.html";
 ?>    
 
-<script src="task.js"></script>
+<!-- task JavaScript -->
+<script type="text/javascript" src="task.js"></script>
+
 </body>
 </html> 
