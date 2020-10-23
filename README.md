@@ -11,4 +11,4 @@ Instruction to run this program in windows machine
   2.Start the Apache server from xampp control panel. 
   3. Download this folder.
   4. Copy folder "task_allocating_application" folder move the content to C:\xampp\htdocs.
-  5. Put this "http://localhost/task_allocating_application/main/admin.php" link to check the actual werbiste in your brower. 
+  5. Use this "http://localhost/task_allocating_application/main/admin.php" link to check the actual website in your browser. 
